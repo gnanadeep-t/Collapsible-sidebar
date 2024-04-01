@@ -12,7 +12,7 @@ import {
 
 const Topbar = ({ userName }) => {
   return (
-    <div className="bg-customGrayBackground h-16 flex justify-between items-center px-4 text-gray-500 z-30 w-full border-b-2 border-white-100">
+    <div className="bg-customGrayBackground min-h-16 flex justify-between items-center px-4 text-gray-500 z-10 w-full border-b-2 border-white-100">
       {/* Left section: User name */}
       <div className="flex items-center ml-3">
         <span className="mr-4">{userName}username</span>
