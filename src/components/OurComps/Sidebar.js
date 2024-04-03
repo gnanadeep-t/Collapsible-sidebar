@@ -15,19 +15,10 @@ export default function Sidebar() {
 
   const navigation = [
     { name: "Dashboard", href: "/", icon: HomeIcon },
-    { name: "Dev", icon: UserCircleIcon },
+    { name: "Dev", href: "/dev", icon: UserCircleIcon },
     { name: "Purchase", href: "/purchase", icon: HomeIcon },
-    { name: "Production", icon: HomeIcon },
+    { name: "Production", href: "/production", icon: HomeIcon },
   ];
-
-  const handleMenuItemClick = (item) => {
-    if (item.submenus) {
-      setOpenSubMenu(openSubMenu === item.name ? null : item.name);
-    } else if (item.href) {
-      // Navigate to the specified href
-      window.location.href = item.href;
-    }
-  };
 
   return (
     <div
@@ -43,7 +34,7 @@ export default function Sidebar() {
       <ul className="">
         {navigation.map((item, index) => (
           <li key={index}>
-            <div className="inline-flex">
+            <Link className="inline-flex" href={`${item.href}`}>
               <item.icon className="w-5 h-5 text-customFont m-3.5 ml-0 " />
               <div
                 className={`h-5 m-3.5 ml-0 transition-all duration-200  ${
@@ -52,7 +43,7 @@ export default function Sidebar() {
               >
                 {item.name}
               </div>
-            </div>
+            </Link>
           </li>
         ))}
       </ul>

@@ -29,133 +29,18 @@ import {
 } from "@/components/ui/tooltip";
 import TasksSection from "./TasksSection";
 import ProjectSection from "./ProjectSection";
+import Sidebar from "./Sidebar";
+import ScheduleCard from "./ScheduleCard";
 
 export default function DashboardLayout() {
   return (
     <div className="grid h-screen w-full pl-[56px]">
       <aside className="inset-y fixed  left-0 z-20 flex h-full flex-col border-r">
-        <div className="border-b p-2">
-          <Button variant="outline" size="icon" aria-label="Home">
-            <Triangle className="size-5 fill-foreground" />
-          </Button>
-        </div>
-        <nav className="grid gap-1 p-2">
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-lg bg-muted"
-                  aria-label="Playground"
-                >
-                  <SquareTerminal className="size-5" />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent side="right" sideOffset={5}>
-                Playground
-              </TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-lg"
-                  aria-label="Models"
-                >
-                  <Bot className="size-5" />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent side="right" sideOffset={5}>
-                Models
-              </TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-lg"
-                  aria-label="API"
-                >
-                  <Code2 className="size-5" />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent side="right" sideOffset={5}>
-                API
-              </TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-lg"
-                  aria-label="Documentation"
-                >
-                  <Book className="size-5" />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent side="right" sideOffset={5}>
-                Documentation
-              </TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-lg"
-                  aria-label="Settings"
-                >
-                  <Settings2 className="size-5" />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent side="right" sideOffset={5}>
-                Settings
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        </nav>
-        <nav className="mt-auto grid gap-1 p-2">
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="mt-auto rounded-lg"
-                  aria-label="Help"
-                >
-                  <LifeBuoy className="size-5" />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent side="right" sideOffset={5}>
-                Help
-              </TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="mt-auto rounded-lg"
-                  aria-label="Account"
-                >
-                  <SquareUser className="size-5" />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent side="right" sideOffset={5}>
-                Account
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        </nav>
+        <Sidebar />
       </aside>
       <div className="flex flex-col">
         <header className="sticky top-0 z-10 flex h-[57px] items-center justify-between gap-1 border-b bg-background px-4">
-          <h1 className="text-xl font-semibold">Logo</h1>
+          <h1 className="text-xl font-semibold">Username</h1>
           {/* Right section: Icons */}
           <div className="flex items-center mr-3">
             {/* Chat icon */}
@@ -194,13 +79,12 @@ export default function DashboardLayout() {
             </Popover>
           </div>
         </header>
-        <main className="flex flex-col">
-          <div className="flex">
+        <main className="flex flex-col gap-6 ml-8 mt-6 mr-6">
+          <div className="flex gap-6">
             <TasksSection />
+            <ScheduleCard />
           </div>
-          <div className="">
-            <ProjectSection />
-          </div>
+          <ProjectSection />
         </main>
       </div>
     </div>

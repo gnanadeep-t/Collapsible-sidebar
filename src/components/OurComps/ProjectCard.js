@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 const ProjectCard = (props) => {
   return (
-    <Card className="bg-customGrayCard border-2 rounded-md w-72 p-3 basis-72 ">
+    <Card className="bg-customGrayCard border-2 rounded-md w-auto flex-grow">
       <CardHeader>
         <CardTitle>{props.title}</CardTitle>
         <CardDescription>{props.customer}</CardDescription>
@@ -23,7 +23,7 @@ const ProjectCard = (props) => {
           </div>
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between m-3">
+      <CardFooter className="flex justify-between w-full p-3">
         <Button variant="outline">{props.deadline}</Button>
         <Button className="bg-primary text-customGrayBackground">{props.name}</Button>
       </CardFooter>

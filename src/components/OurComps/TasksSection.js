@@ -11,8 +11,8 @@ import {
 
 const TasksSection = () => {
   return (
-    <div className="w-3/5 p-8 bg-customGrayCard border-2 m-6 flex justify-center items-center rounded-md">
-      <Table className=" w-full box-border border-customBorder overflow-scroll">
+    <div className="w-3/5 p-3 bg-customGrayCard border-2 flex justify-center items-center rounded-md">
+      <Table className=" w-full box-border border-customBorder overflow-scroll caption-top">
         <TableCaption className="text-xl text-left mb-6 text-customFontHeading">
           Tasks
         </TableCaption>
@@ -26,7 +26,7 @@ const TasksSection = () => {
         </TableHeader>
         <TableBody className="text-customFont">
           <TableRow className="hover:bg-muted border-b-customBorder border-b-2">
-            <TableCell className="text-center ">INV001</TableCell>
+            <TableCell className="text-center">INV001</TableCell>
             <TableCell className="text-center">Paid</TableCell>
             <TableCell className="text-center">Credit Card</TableCell>
             <TableCell className="text-center">$250.00</TableCell>
