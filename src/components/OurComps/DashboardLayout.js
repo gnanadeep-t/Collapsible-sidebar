@@ -31,6 +31,7 @@ import TasksSection from "./TasksSection";
 import ProjectSection from "./ProjectSection";
 import Sidebar from "./Sidebar";
 import ScheduleCard from "./ScheduleCard";
+import DrawerComponent from "./DrawerComponent";
 
 export default function DashboardLayout() {
   return (
@@ -42,6 +43,7 @@ export default function DashboardLayout() {
         <header className="sticky top-0 z-10 flex h-[57px] items-center justify-between gap-1 border-b bg-background px-4">
           <h1 className="text-xl font-semibold">Username</h1>
           {/* Right section: Icons */}
+          <DrawerComponent/>
           <div className="flex items-center mr-3">
             {/* Chat icon */}
             <Popover className="mr-4 cursor-pointer">

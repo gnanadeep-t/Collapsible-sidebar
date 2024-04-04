@@ -24,6 +24,7 @@ module.exports = {
         "customFontHeading":"#171717",
         "customBorder":"#e9e8e9",
         "customIconBg":"#edecec",
+        "customFormField" :"#f7f6f7",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

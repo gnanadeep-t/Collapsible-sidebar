@@ -20,6 +20,7 @@ const Topbar = ({ userName }) => {
 
       {/* Right section: Icons */}
       <div className="flex items-center mr-3">
+      <DrawerComponent/>
         {/* Chat icon */}
         <Popover className="mr-4 cursor-pointer">
           <PopoverTrigger>

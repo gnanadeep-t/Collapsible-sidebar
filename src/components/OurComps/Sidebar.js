@@ -6,8 +6,20 @@ import {
   HomeIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 import { Separator } from "../ui/separator";
 import Link from "next/link";
+import { Button } from "../ui/button";
+import DrawerComponent from "./DrawerComponent";
 
 export default function Sidebar() {
   const [openSubMenu, setOpenSubMenu] = useState(null);
