@@ -1,6 +1,18 @@
+"use client";
 import React from "react";
-import { Checkbox } from "@/components/ui/checkbox"
-
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Switch } from "@/components/ui/switch";
 const Form = () => {
   return (
     <div className="p-4">
@@ -51,6 +63,12 @@ const Form = () => {
           placeholder="Enter your email"
         />
       </div>
+      <div className="mb-4">
+        <div className="flex items-center space-x-2">
+          <Label htmlFor="airplane-mode">Toggle</Label>
+          <Switch id="airplane-mode"/>
+        </div>
+      </div>
 
       <div className="mb-4">
         <label
@@ -70,32 +88,38 @@ const Form = () => {
 
       <div className="mb-4">
         <label
-          htmlFor="gender"
+          htmlFor="password"
           className="block text-sm font-medium text-gray-700"
         >
-          Gender
+          Menu
         </label>
-        <select
-          id="gender"
-          name="gender"
-          className="mt-1 p-2 w-full border rounded-md bg-customFormField"
-        >
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
+        <Select>
+          <SelectTrigger className="w-[180px] bg-customFormField">
+            <SelectValue placeholder="Select Menu" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>Menu</SelectLabel>
+              <SelectItem value="Menu1">Menu1</SelectItem>
+              <SelectItem value="Menu2">Menu2</SelectItem>
+              <SelectItem value="Menu2">Menu2</SelectItem>
+              <SelectItem value="Menu4">Menu4</SelectItem>
+              <SelectItem value="Menu5">Menu5</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
       </div>
-
       <div className="flex items-center space-x-2">
-      <Checkbox id="terms" className="text-primary" />
-      <label
-        htmlFor="terms"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-      >
-        Accept terms and conditions
-      </label>
-    </div>
-
+        <div className="flex items-center space-x-2">
+          <Checkbox id="terms" />
+          <label
+            htmlFor="terms"
+            className="text-sm font-medium  leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            Accept terms and conditions
+          </label>
+        </div>
+      </div>
     </div>
   );
 };

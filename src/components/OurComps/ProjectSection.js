@@ -15,7 +15,7 @@ const ProjectSection = () => {
   return (
     <div 
     // className="flex justify-evenly flex-wrap w-full overflow-hidden "
-    className="w-full rounded-md flex  flex-wrap gap-6 h-96"
+    className="w-full rounded-md flex flex-wrap gap-6 h-96"
     >
       <ProjectCard title='Project title' name='customer' deadline='deadline'/>
       <ProjectCard title='Project title' name='customer' deadline='deadline'/>
